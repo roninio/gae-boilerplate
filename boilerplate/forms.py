@@ -43,8 +43,8 @@ class UsernameMixin(BaseForm):
     username = fields.TextField(_('Username'), [validators.Required(),
                                                 validators.Length(max=FIELD_MAXLENGTH, message=_(
                                                     "Field cannot be longer than %(max)d characters.")),
-                                                validators.regexp(utils.VALID_USERNAME_REGEXP, message=_(
-                                                    "Username invalid. Use only letters and numbers."))])
+                                                validators.regexp(utils.EMAIL_REGEXP, message=_(
+                                                    "Username / Email invalid."))])
 
 
 class NameMixin(BaseForm):
